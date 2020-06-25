@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/portfolio/vm/static/css/main.0079237b.chunk.css",
+    "main.js": "/portfolio/vm/static/js/main.13d521c2.chunk.js",
+    "main.js.map": "/portfolio/vm/static/js/main.13d521c2.chunk.js.map",
+    "runtime-main.js": "/portfolio/vm/static/js/runtime-main.9a2c0d66.js",
+    "runtime-main.js.map": "/portfolio/vm/static/js/runtime-main.9a2c0d66.js.map",
+    "static/js/2.834fb462.chunk.js": "/portfolio/vm/static/js/2.834fb462.chunk.js",
+    "static/js/2.834fb462.chunk.js.map": "/portfolio/vm/static/js/2.834fb462.chunk.js.map",
+    "index.html": "/portfolio/vm/index.html",
+    "precache-manifest.f55577cd8e39a82faf1f00ac1e36657c.js": "/portfolio/vm/precache-manifest.f55577cd8e39a82faf1f00ac1e36657c.js",
+    "service-worker.js": "/portfolio/vm/service-worker.js",
+    "static/css/main.0079237b.chunk.css.map": "/portfolio/vm/static/css/main.0079237b.chunk.css.map",
+    "static/js/2.834fb462.chunk.js.LICENSE.txt": "/portfolio/vm/static/js/2.834fb462.chunk.js.LICENSE.txt",
+    "static/media/chat.png": "/portfolio/vm/static/media/chat.19906ac3.png",
+    "static/media/css.png": "/portfolio/vm/static/media/css.c26a73b4.png",
+    "static/media/django.png": "/portfolio/vm/static/media/django.db5f34af.png",
+    "static/media/express.png": "/portfolio/vm/static/media/express.8587dd06.png",
+    "static/media/html.png": "/portfolio/vm/static/media/html.664a8c00.png",
+    "static/media/javascript.png": "/portfolio/vm/static/media/javascript.0e4fdce8.png",
+    "static/media/library.png": "/portfolio/vm/static/media/library.7e85ae59.png",
+    "static/media/logo.svg": "/portfolio/vm/static/media/logo.dd39779e.svg",
+    "static/media/market.png": "/portfolio/vm/static/media/market.5ea0aca6.png",
+    "static/media/mongodb.png": "/portfolio/vm/static/media/mongodb.6f3bf2e6.png",
+    "static/media/mysql.svg": "/portfolio/vm/static/media/mysql.f80a91ba.svg",
+    "static/media/next.png": "/portfolio/vm/static/media/next.a9b6d3f1.png",
+    "static/media/nodejs.png": "/portfolio/vm/static/media/nodejs.dbd32625.png",
+    "static/media/nuxt.png": "/portfolio/vm/static/media/nuxt.74e8b3b1.png",
+    "static/media/react.png": "/portfolio/vm/static/media/react.25e63889.png",
+    "static/media/social.png": "/portfolio/vm/static/media/social.641acabc.png",
+    "static/media/todo.png": "/portfolio/vm/static/media/todo.dd3970bb.png",
+    "static/media/tweet.png": "/portfolio/vm/static/media/tweet.7f6f0380.png",
+    "static/media/youtube.png": "/portfolio/vm/static/media/youtube.a5aad5f7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9a2c0d66.js",
+    "static/js/2.834fb462.chunk.js",
+    "static/css/main.0079237b.chunk.css",
+    "static/js/main.13d521c2.chunk.js"
+  ]
+}
