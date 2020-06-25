@@ -1,0 +1,136 @@
+@import "./normalize.scss";
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  color: #201e45;
+}
+
+/*@font-face {
+  font-family: "Modern Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url("/fonts/modernSans.ttf") format("truetype"); /* Safari, Android, iOS */
+
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  color: #323232;
+  background: -webkit-radial-gradient(
+      circle,
+      transparent 30%,zzz
+      rgba(0, 0, 0, 0.2) 180%
+    ),
+    transparent;
+  background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.2) 180%),
+    transparent;
+  font-size: 1.6em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.0625em;
+  line-height: 1.8em;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    font-size: 1.4em;
+    line-height: 1.6em;
+  }
+}
+
+a {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+  margin: 3.2rem 0 1.6rem 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h1 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+}
+h2 {
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h2 {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+}
+h3 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+h4 {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h4 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+}
+h5 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h5 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+}
+h6 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}

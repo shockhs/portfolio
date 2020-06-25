@@ -1,0 +1,76 @@
+.header {
+  height: 10vh;
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  align-items: center;
+  grid-template-areas: "logotype logotype navigation";
+  .logotype:hover {
+    text-decoration: none;
+  }
+  .navigation {
+    a {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    a::before {
+      position: absolute;
+      content: attr(data-content); /* Prints the value of the attribute */
+      top: 0;
+      left: 0;
+      color: rgb(0, 140, 255);
+      overflow: hidden;
+      transition: width 475ms ease;
+      width: 0;
+      white-space: nowrap;
+    }
+    a:hover::before {
+      width: 100%;
+    }
+    .active {
+      color: rgb(0, 140, 255);
+    }
+  }
+}
+
+.logotype {
+  grid-area: logotype;
+  display: flex;
+  img {
+    height: 36px;
+    width: auto;
+    margin-right: 10px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 36px;
+    span {
+      line-height: 14px;
+    }
+  }
+}
+
+.navigation {
+  grid-area: navigation;
+}
+
+a {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.navigation ul {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation ul li {
+  font-weight: bold;
+}

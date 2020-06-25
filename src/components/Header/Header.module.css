@@ -1,0 +1,107 @@
+.header {
+  height: 10vh;
+  padding: 0 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 40% 40%;
+      grid-template-columns: 20% 40% 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "logotype logotype navigation";
+}
+
+.header .logotype:hover {
+  text-decoration: none;
+}
+
+.header .navigation a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.header .navigation a::before {
+  position: absolute;
+  content: attr(data-content);
+  /* Prints the value of the attribute */
+  top: 0;
+  left: 0;
+  color: #008cff;
+  overflow: hidden;
+  -webkit-transition: width 475ms ease;
+  transition: width 475ms ease;
+  width: 0;
+  white-space: nowrap;
+}
+
+.header .navigation a:hover::before {
+  width: 100%;
+}
+
+.header .navigation .active {
+  color: #008cff;
+}
+
+.logotype {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: logotype;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logotype img {
+  height: 36px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.logotype .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 36px;
+}
+
+.logotype .text span {
+  line-height: 14px;
+}
+
+.navigation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: navigation;
+}
+
+a {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.navigation ul {
+  list-style: none;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navigation ul li {
+  font-weight: bold;
+}
+/*# sourceMappingURL=Header.module.css.map */

@@ -1,0 +1,132 @@
+.img {
+  display: block;
+  width: auto;
+  height: 280px;
+  border-radius: 15px;
+}
+
+.screenshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.screenshots .container {
+  position: relative;
+}
+
+.screenshots .container .img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 300px;
+  border-radius: 15px;
+}
+
+.screenshots .container .icons {
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screenshots .container .icons .iconContainer {
+  background-color: #000000;
+  padding: 5px 10px 0 10px;
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.screenshots .container .icons .iconContainer .icon a {
+  color: red;
+}
+
+.screenshots .container .icons .iconContainer .icon a:hover {
+  color: #ffffff;
+}
+
+.screenshots .container .icons .iconContainer .icon + .icon {
+  margin-left: 15px;
+}
+
+.element {
+  width: 100%;
+  height: 75vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "description  screenshot";
+  padding: 0 25px;
+}
+
+.element + .element {
+  margin-top: 20px;
+}
+
+.screenshots {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: screenshot;
+}
+
+.description {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: description;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.description h2 {
+  color: #201e45;
+}
+
+.description ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.techs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.techs img {
+  height: 100px;
+  width: auto;
+}
+
+.techs img + img {
+  margin-left: 20px;
+}
+/*# sourceMappingURL=ProjectsPage.module.css.map */
