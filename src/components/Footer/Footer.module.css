@@ -21,16 +21,30 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .social li {
   text-transform: uppercase;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .social li + li {
   margin-left: 30px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .social {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .social li + li {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=Footer.module.css.map */

@@ -348,12 +348,6 @@ html {
   color: #201e45;
 }
 
-/*@font-face {
-  font-family: "Modern Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"),
-    url("/fonts/modernSans.ttf") format("truetype"); /* Safari, Android, iOS */
 body {
   padding: 0;
   margin: 0;

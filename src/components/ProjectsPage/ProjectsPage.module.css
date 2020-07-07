@@ -30,47 +30,13 @@
   border-radius: 15px;
 }
 
-.screenshots .container .icons {
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  position: absolute;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.screenshots .container .icons .iconContainer {
-  background-color: #000000;
-  padding: 5px 10px 0 10px;
-  border-bottom-left-radius: 15px;
-  border-top-right-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.screenshots .container .icons .iconContainer .icon a {
-  color: red;
-}
-
-.screenshots .container .icons .iconContainer .icon a:hover {
-  color: #ffffff;
-}
-
-.screenshots .container .icons .iconContainer .icon + .icon {
-  margin-left: 15px;
-}
-
 .element {
   width: 100%;
   height: 75vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
       grid-template-areas: "description  screenshot";
   padding: 0 25px;
 }
@@ -128,5 +94,31 @@
 
 .techs img + img {
   margin-left: 20px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .element {
+    height: 70vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 50% 50%;
+    grid-template-rows: 50% 50%;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+        grid-template-areas: "description" "screenshot";
+  }
+  .element .description .techs img {
+    height: 50px;
+    width: auto;
+  }
+  .element .screenshots {
+    -ms-grid-row-align: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .element .screenshots .img {
+    width: 95%;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=ProjectsPage.module.css.map */

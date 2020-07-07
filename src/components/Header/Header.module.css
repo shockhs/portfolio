@@ -1,10 +1,165 @@
+.hambmenu {
+  position: relative;
+  width: 40px;
+  height: 25px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.hambmenu span {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #000;
+  border-radius: 8px;
+  opacity: 1;
+  right: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  padding: 0;
+  z-index: 5;
+}
+
+.menubar {
+  display: none;
+}
+
+.menubar span {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 60px;
+}
+
+.hambclicker {
+  content: "";
+  height: 48px;
+  width: 55px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.hambmenu span:first-child {
+  top: 0;
+}
+
+.hambmenu span:nth-child(2),
+.hambmenu span:nth-child(3) {
+  top: 10px;
+}
+
+.hambmenu span:nth-child(4) {
+  top: 20px;
+}
+
+.hambmenu.isopen span:first-child {
+  top: 18px;
+  width: 0;
+  left: 50%;
+  opacity: 0;
+}
+
+.hambmenu.isopen span:nth-child(2) {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.hambmenu.isopen span:nth-child(3) {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.hambmenu.isopen span:nth-child(4) {
+  top: 18px;
+  width: 0;
+  left: 50%;
+  opacity: 0;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  height: auto;
+  width: 210px;
+  display: none;
+  background-color: #fff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  z-index: 1;
+}
+
+.menu ul {
+  margin-top: 0;
+  color: #000;
+  list-style-type: none;
+  text-align: left;
+  padding: 20px 0 0;
+}
+
+.menu li {
+  padding: 5px 0 5px 15px;
+}
+
+.menu li a {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu.isopen {
+  -webkit-transform: none;
+          transform: none;
+  display: block;
+}
+
+@media screen and (max-width: 420px) {
+  .menubar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .navigation {
+    display: none;
+  }
+  .menubar span {
+    font-size: 1.2em;
+  }
+}
+
 .header {
   height: 10vh;
   padding: 0 25px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 40% 40%;
-      grid-template-columns: 20% 40% 40%;
+  -ms-grid-columns: 20% 50% 30%;
+  grid-template-columns: 20% 50% 30%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -15,16 +170,24 @@
   text-decoration: none;
 }
 
+.header .menu_navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .header .navigation a {
   position: relative;
   display: inline-block;
   overflow: hidden;
 }
 
-.header .navigation a::before {
+.header .navigation a:before {
   position: absolute;
   content: attr(data-content);
-  /* Prints the value of the attribute */
   top: 0;
   left: 0;
   color: #008cff;
@@ -35,7 +198,7 @@
   white-space: nowrap;
 }
 
-.header .navigation a:hover::before {
+.header .navigation a:hover:before {
   width: 100%;
 }
 
@@ -85,14 +248,16 @@
 
 a {
   font-size: 1.6rem;
-  text-transform: uppercase;
-  font-weight: bold;
   letter-spacing: 0.1rem;
+}
+
+.navigation ul,
+a {
+  text-transform: uppercase;
 }
 
 .navigation ul {
   list-style: none;
-  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,6 +267,6 @@ a {
 }
 
 .navigation ul li {
-  font-weight: bold;
+  font-weight: 700;
 }
 /*# sourceMappingURL=Header.module.css.map */

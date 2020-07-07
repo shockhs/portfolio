@@ -1,10 +1,32 @@
 .contact {
-  padding: 0 25px;
   height: 90vh;
+  padding: 0 25px;
   display: flex;
   align-items: center;
   justify-content: center;
-  .link + .link {
-    margin-left: 40px;
+}
+.contact .link + .link {
+  margin-left: 40px;
+}
+.contact .link a {
+  transition: color 0.3 ease-out;
+}
+.contact .link a:hover {
+  color: #008cff;
+}
+@media screen and (max-width: 420px) {
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .link {
+    display: flex;
+    justify-content: center;
+  }
+  .contact .link + .link {
+    margin: 0;
   }
 }

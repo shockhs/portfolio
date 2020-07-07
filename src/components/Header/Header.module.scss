@@ -1,76 +1,197 @@
+.hambmenu {
+  position: relative;
+  width: 40px;
+  height: 25px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.hambmenu span {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #000;
+  border-radius: 8px;
+  opacity: 1;
+  right: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  padding: 0;
+  z-index: 5;
+}
+.menubar {
+  display: none;
+}
+.menubar span {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 60px;
+}
+.hambclicker {
+  content: "";
+  height: 48px;
+  width: 55px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  z-index: 9;
+}
+.hambmenu span:first-child {
+  top: 0;
+}
+.hambmenu span:nth-child(2),
+.hambmenu span:nth-child(3) {
+  top: 10px;
+}
+.hambmenu span:nth-child(4) {
+  top: 20px;
+}
+.hambmenu.isopen span:first-child {
+  top: 18px;
+  width: 0;
+  left: 50%;
+  opacity: 0;
+}
+.hambmenu.isopen span:nth-child(2) {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hambmenu.isopen span:nth-child(3) {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hambmenu.isopen span:nth-child(4) {
+  top: 18px;
+  width: 0;
+  left: 50%;
+  opacity: 0;
+}
+.menu {
+  position: absolute;
+  right: 0;
+  height: auto;
+  width: 210px;
+  display: none;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  z-index: 1;
+}
+.menu ul {
+  margin-top: 0;
+  color: #000;
+  list-style-type: none;
+  text-align: left;
+  padding: 20px 0 0;
+}
+.menu li {
+  padding: 5px 0 5px 15px;
+}
+.menu li a {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.menu li:last-child {
+  border-bottom: none;
+}
+li a {
+  text-decoration: none;
+  color: #000;
+}
+.menu.isopen {
+  transform: none;
+  display: block;
+}
+
+@media screen and (max-width: 420px) {
+  .menubar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navigation {
+    display: none;
+  }
+  .menubar span {
+    font-size: 1.2em;
+  }
+}
 .header {
   height: 10vh;
   padding: 0 25px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 20% 40% 40%;
+  -ms-grid-columns: 20% 50% 30%;
+  grid-template-columns: 20% 50% 30%;
   align-items: center;
   grid-template-areas: "logotype logotype navigation";
-  .logotype:hover {
-    text-decoration: none;
-  }
-  .navigation {
-    a {
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-    }
-    a::before {
-      position: absolute;
-      content: attr(data-content); /* Prints the value of the attribute */
-      top: 0;
-      left: 0;
-      color: rgb(0, 140, 255);
-      overflow: hidden;
-      transition: width 475ms ease;
-      width: 0;
-      white-space: nowrap;
-    }
-    a:hover::before {
-      width: 100%;
-    }
-    .active {
-      color: rgb(0, 140, 255);
-    }
-  }
 }
-
+.header .logotype:hover {
+  text-decoration: none;
+}
+.header .menu_navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+.header .navigation a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.header .navigation a:before {
+  position: absolute;
+  content: attr(data-content);
+  top: 0;
+  left: 0;
+  color: #008cff;
+  overflow: hidden;
+  transition: width 475ms ease;
+  width: 0;
+  white-space: nowrap;
+}
+.header .navigation a:hover:before {
+  width: 100%;
+}
+.header .navigation .active {
+  color: #008cff;
+}
 .logotype {
   grid-area: logotype;
   display: flex;
-  img {
-    height: 36px;
-    width: auto;
-    margin-right: 10px;
-  }
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 36px;
-    span {
-      line-height: 14px;
-    }
-  }
 }
-
+.logotype img {
+  height: 36px;
+  width: auto;
+  margin-right: 10px;
+}
+.logotype .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 36px;
+}
+.logotype .text span {
+  line-height: 14px;
+}
 .navigation {
   grid-area: navigation;
 }
-
 a {
   font-size: 1.6rem;
-  text-transform: uppercase;
-  font-weight: bold;
   letter-spacing: 0.1rem;
 }
-
+.navigation ul,
+a {
+  text-transform: uppercase;
+}
 .navigation ul {
   list-style: none;
-  text-transform: uppercase;
   display: flex;
   justify-content: space-between;
 }
-
 .navigation ul li {
-  font-weight: bold;
+  font-weight: 700;
 }
